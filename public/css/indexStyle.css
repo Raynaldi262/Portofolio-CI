@@ -1,0 +1,262 @@
+* {
+  color: white;
+  font-family: "Viga", sans-serif;
+}
+
+.bg,
+.newsletter-bg {
+  background-image: url("/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrap {
+  position: relative;
+}
+
+.sub {
+  color: #a9a9a9;
+}
+
+@keyframes borderBtm {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes borderBtm1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg {
+    background-position: center top;
+    padding: 200px 50px;
+    height: 100vh;
+  }
+
+  .newsletter-text h1 {
+    font-size: 60px;
+  }
+
+  span {
+    /* text-decoration: underline;
+    text-decoration-color: rgb(41, 255, 71); */
+    border-bottom: 1px solid rgb(41, 255, 71);
+    padding-bottom: 3px;
+    border-bottom-width: 5px;
+  }
+
+  .newsletter-text {
+    padding-top: 6%;
+    padding-left: 15%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .gambar {
+    width: 100px;
+  }
+
+  .nav-menu {
+    margin-top: 35px;
+  }
+
+  .nav-menu a {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* .nav-menu a:before {
+    content: "";
+    position: absolute;
+    margin-left: 8px;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  } */
+
+  .nav-menu a:hover:before,
+  .nav-menu .active > a:before {
+    display: absolute;
+    visibility: visible;
+  }
+
+  .nav-menu a:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid rgb(41, 255, 71);
+    padding-bottom: 3px;
+    width: 50%;
+    margin-bottom: -6px;
+    animation-name: borderBtm;
+    animation-duration: 0.5s;
+  }
+
+  /* .nav-menu a:hover, */
+  .nav-menu .active > a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .icon-holder {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 16.5%;
+  }
+  .icon-holder a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-holder a:hover {
+    background: #18d26e;
+  }
+}
+/* /
+
+
+
+
+
+
+
+
+/ */
+@media (max-width: 575.98px) {
+  .navbar-top a:hover::after {
+    content: "";
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px rgba(41, 255, 71, 0.5) solid;
+    width: 10%;
+    margin: auto;
+    margin-bottom: -3px;
+    animation-name: borderBtm1;
+    animation-duration: 0.3s;
+  }
+
+  .bg {
+    padding: 200px 50px;
+    height: 100vh;
+  }
+
+  .typed {
+    /* text-decoration: underline;
+    text-decoration-color: rgb(41, 255, 71); */
+    border-bottom: 1px solid rgb(41, 255, 71);
+    padding-bottom: 3px;
+    border-bottom-width: 2px;
+  }
+
+  .newsletter-text {
+    padding-left: 10%;
+    margin: auto;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .nama {
+    margin: 20px auto;
+    font-size: 15px;
+  }
+  .newsletter-text h1 {
+    font-size: 35px;
+  }
+
+  .gambar {
+    width: 100px;
+  }
+
+  .icon-holder {
+    margin-top: -5px;
+    display: flex;
+    margin-left: 18%;
+  }
+
+  .icon-holder a {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    line-height: 1;
+    transition: 0.5s;
+    margin-right: 5px;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-holder a:hover {
+    background: #18d26e;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    left: 5%;
+    z-index: 9998;
+    background: black;
+    display: block;
+    width: 90%;
+    height: 80%;
+    border: 2px #a9a9a9 solid;
+  }
+
+  .navbar-toggler {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+  }
+
+  .navbar-dark .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    outline: none;
+  }
+
+  .pembungkus {
+    margin-top: 30%;
+  }
+
+  .navbar-nav .active {
+    color: #18d26e !important;
+  }
+}

@@ -1,0 +1,211 @@
+* {
+  color: white;
+  font-family: "Viga", sans-serif;
+}
+
+body {
+  background-image: url("/img/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* 
+.navbar-top .active {
+  border-bottom: 2px rgba(41, 255, 71, 0.5) solid;
+} */
+
+.namaProfile {
+  padding-left: 13%;
+}
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 2%;
+}
+
+hr {
+  border-top: 4px solid rgba(41, 255, 71, 0.5);
+}
+
+.bg-custom {
+  background-color: black;
+}
+
+.gambar span {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  min-width: 40%;
+  margin-left: 28%;
+  top: 0;
+  opacity: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.gambar span:hover {
+  min-width: 92%;
+  opacity: 1;
+  margin-left: 0%;
+}
+
+.gambar span:hover::after {
+  margin-top: -5px;
+  content: "";
+  display: block;
+  border-bottom: 4px white solid;
+  width: 30%;
+}
+
+.gambar span:hover::before {
+  content: "";
+  display: block;
+  margin-left: auto;
+  border-top: 4px white solid;
+  width: 30%;
+}
+
+@keyframes borderBtm {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes borderBtm1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-top a:hover::after {
+    content: "";
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px rgba(41, 255, 71, 0.5) solid;
+    width: 50%;
+    margin-bottom: -3px;
+
+    animation-name: borderBtm;
+    animation-duration: 0.5s;
+  }
+
+  .navbar-top {
+    padding-left: 40%;
+  }
+
+  .gambar img {
+    width: 100%;
+    margin-bottom: 10%;
+    height: 255px;
+  }
+  .gambar span {
+    width: 85%;
+    height: 255px;
+    line-height: 255px;
+  }
+
+  .filter-button-group button {
+    background-color: rgb(46, 45, 45);
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+  }
+
+  .filter-button-group button:hover {
+    background-color: rgba(41, 255, 71, 0.5);
+  }
+
+  .filter-button-group {
+    margin-left: 38%;
+    margin-bottom: 10px;
+  }
+
+  .filter-button-group .active {
+    background-color: rgba(41, 255, 71, 0.5);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-top a:hover::after {
+    content: "";
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px rgba(41, 255, 71, 0.5) solid;
+    width: 10%;
+    margin: auto;
+    margin-bottom: -3px;
+
+    animation-name: borderBtm1;
+    animation-duration: 0.3s;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+  .gambar img {
+    margin-bottom: 0.5px;
+    height: 80px;
+    width: 120%;
+  }
+
+  .gambar span {
+    height: 80px;
+    line-height: 80px;
+    width: 88%;
+    font-size: 12px;
+  }
+  .gambar span:hover {
+    min-width: 88%;
+    opacity: 1;
+    margin-left: 0%;
+  }
+
+  .colGambar {
+    margin-bottom: 5px;
+    margin-right: -11px;
+  }
+
+  /* .lb-container {
+    margin-top: 5%;
+  } */
+
+  .namaProfile {
+    margin-top: 5px;
+    margin-left: -30px;
+    font-size: 20px;
+  }
+
+  .jumbotron {
+    height: 100%;
+  }
+
+  .filter-button-group {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .filter-button-group button {
+    background-color: rgb(46, 45, 45);
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 4px;
+    border: none;
+  }
+
+  .filter-button-group button:hover {
+    background-color: rgba(41, 255, 71, 0.5);
+  }
+
+  .filter-button-group .active {
+    background-color: rgba(41, 255, 71, 0.5);
+  }
+}

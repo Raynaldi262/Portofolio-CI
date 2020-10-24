@@ -1,0 +1,182 @@
+* {
+  color: white;
+  font-family: "Viga", sans-serif;
+}
+
+body {
+  background-image: url("/img/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 2%;
+}
+
+hr {
+  border-top: 4px solid rgba(41, 255, 71, 0.5);
+}
+
+.bg-custom {
+  background-color: black;
+}
+
+@keyframes borderBtm {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes borderBtm1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 10%;
+  }
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.quote {
+  grid-area: quote;
+}
+
+.quote p {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Merriweather", serif !important;
+}
+
+.social {
+  grid-area: social;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.icon-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-holder a {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  line-height: 1;
+  transition: 0.5s;
+  margin-right: 5px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-holder a:hover {
+  background: #18d26e;
+  border: transparent;
+}
+
+@media (min-width: 992px) {
+  .containerContact {
+    display: grid;
+    grid-template-areas: "header header header" "quote social phone";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+  }
+
+  .namaProfile {
+    padding-left: 13%;
+    padding-right: 28%;
+  }
+  .navbar-top a:hover::after {
+    content: "";
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px rgba(41, 255, 71, 0.5) solid;
+    width: 50%;
+    margin-bottom: -3px;
+    animation-name: borderBtm;
+    animation-duration: 0.5s;
+  }
+
+  .header img {
+    /* y,x, blur , spread  */
+    box-shadow: 0px 0px 10px 2px rgb(61, 61, 61);
+    border-radius: 50%;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .phone .number {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 15%;
+    margin-top: -5%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .containerContact {
+    display: grid;
+    grid-template-areas: "header header header" "quote quote quote" "social social social" "phone phone phone";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .navbar-top a:hover::after {
+    content: "";
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px rgba(41, 255, 71, 0.5) solid;
+    width: 10%;
+    margin: auto;
+    margin-bottom: -3px;
+    animation-name: borderBtm1;
+    animation-duration: 0.3s;
+  }
+
+  .header img {
+    /* y,x, blur , spread  */
+    box-shadow: 0px 0px 4px 2px rgb(61, 61, 61);
+    border-radius: 50%;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .quote p,
+  .quote footer {
+    font-size: 12px;
+  }
+
+  .phone p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .phone .number {
+    margin-top: -15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
